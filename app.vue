@@ -148,7 +148,7 @@ function submit(e) {
     Quanto deve Nibolas?
   </h1>
   <h2 class="text-zinc-100 text-lg sm:text-2xl text-center mt-6">
-    Lista publica das dividas de Nibolas
+    Lista publica das dívidas de Nibolas
   </h2>
   <h3 class="text-zinc-100 text-xl sm:text-3xl text-center mt-4">
     R$ {{ howMuch }}
