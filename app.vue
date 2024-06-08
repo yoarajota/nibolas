@@ -35,7 +35,13 @@ function animateSumOfValue(value) {
         clearInterval(animate)
       }
 
-      if (remaining >= 1000) {
+      if (remaining >= 100000) {
+        howMuch.value += 100000
+        summed += 100000
+      } else if (remaining >= 10000) {
+        howMuch.value += 10000
+        summed += 10000
+      } else if (remaining >= 1000) {
         howMuch.value += 1000
         summed += 1000
       } else if (remaining >= 100) {
@@ -97,7 +103,11 @@ function calcHowMuch() {
 
   const startInterval = () => {
     animate = setInterval(() => {
-      if ((howMuch.value + 1000) < total) {
+      if ((howMuch.value + 100000) < total) {
+        howMuch.value += 100000
+      } else if ((howMuch.value + 10000) < total) {
+        howMuch.value += 10000
+      } else if ((howMuch.value + 1000) < total) {
         howMuch.value += 1000
       } else if ((howMuch.value + 100) < total) {
         howMuch.value += 100
