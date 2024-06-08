@@ -144,27 +144,27 @@ function submit(e) {
 </script>
 
 <template>
-  <h1 class="text-zinc-100 text-6xl text-center mt-12">
+  <h1 class="text-zinc-100 text-4xl sm:text-6xl text-center mt-12">
     Quanto deve Nibolas?
   </h1>
-  <h2 class="text-zinc-100 text-2xl text-center mt-6">
+  <h2 class="text-zinc-100 text-lg sm:text-2xl text-center mt-6">
     Lista publica das dividas de Nibolas
   </h2>
-  <h3 class="text-zinc-100 text-3xl text-center mt-4">
+  <h3 class="text-zinc-100 text-xl sm:text-3xl text-center mt-4">
     R$ {{ howMuch }}
   </h3>
 
-  <div class="mx-auto max-w-3xl">
-    <form @submit="submit" class="flex gap-4 items-end justify-center mt-8">
-      <div>
+  <div class="mx-auto px-6 sm:px-0 max-w-3xl">
+    <form @submit="submit" class="flex flex-col sm:flex-row gap-4 items-center sm:items-end justify-center mt-8">
+      <div class="min-w-full sm:min-w-fit">
         <label for="name" class="block text-sm font-medium leading-6 text-zinc-100">Nome</label>
 
         <div class="relative mt-2 rounded-md shadow-sm">
           <input v-model="reactiveForm.name" type="text" name="name" id="name"
-            class="block min-w-[420px] w-full rounded-md outline-none border-0 py-1.5 pl-3 pr-20 text-zinc-100 bg-slate-900 ring-1 border-none ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6">
+            class="block sm:w-[420px] w-full rounded-md outline-none border-0 py-1.5 px-3 text-zinc-100 bg-slate-900 ring-1 border-none ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6">
         </div>
       </div>
-      <div>
+      <div class="min-w-full sm:min-w-fit">
         <label for="value" class="block text-sm font-medium leading-6 text-zinc-100">Valor devido</label>
 
         <div class="relative mt-2 rounded-md shadow-sm">
