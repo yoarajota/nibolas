@@ -177,7 +177,7 @@ function submit(e) {
         </div>
       </div>
       <button
-        class="h-fit inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-zinc-100 text-slate-900 hover:bg-slate-300">
+        class="h-fit inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-6 bg-zinc-100 text-slate-900 hover:bg-slate-300">
         Enviar
       </button>
     </form>
