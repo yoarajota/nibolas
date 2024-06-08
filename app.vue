@@ -106,7 +106,7 @@ function calcHowMuch() {
         clearInterval(animate);
         interval = 120; // Aumenta o intervalo quando se aproxima de 10
         startInterval();
-      } else if (howMuch.value + 1 < total) {
+      } else if (howMuch.value < total) {
         howMuch.value += 1
         clearInterval(animate);
         interval = 180; // Aumenta ainda mais o intervalo quando se aproxima de 1
