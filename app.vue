@@ -11,7 +11,7 @@ const reactiveForm = reactive({
 })
 
 useHead({
-  title: 'Quanto deve Nibolas?',
+  title: 'Quanto amamos Nibolas?',
   meta: [
   ],
   bodyAttrs: {
@@ -147,13 +147,13 @@ function submit(e) {
 
 <template>
   <h1 class="text-zinc-100 text-4xl sm:text-6xl text-center mt-12">
-    Quanto deve Nibolas?
+    ❤ Quanto amamos Nibolas? ❤
   </h1>
   <h2 class="text-zinc-100 text-lg sm:text-2xl text-center mt-6">
-    Lista publica das dívidas de Nibolas
+    Lista publica de amor ao Nibolas
   </h2>
   <h3 class="text-zinc-100 text-xl sm:text-3xl text-center mt-4">
-    R$ {{ howMuch }}
+    ❤ {{ howMuch }}x ❤
   </h3>
 
   <div class="mx-auto px-6 sm:px-0 max-w-3xl">
@@ -170,12 +170,12 @@ function submit(e) {
         <label for="value" class="block text-sm font-medium leading-6 text-zinc-100">Valor devido</label>
 
         <div class="relative mt-2 rounded-md shadow-sm">
-          <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-            <span class="text-zinc-100 sm:text-sm">R$</span>
-          </div>
           <input v-model="reactiveForm.value" type="number" name="value" id="value"
-            class="block w-36 rounded-md outline-none border-0 py-1.5 pl-9 text-zinc-100 bg-slate-900 ring-1 border-none ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+            class="block w-36 rounded-md outline-none border-0 py-1.5 pl-3 pr-9 text-zinc-100 bg-slate-900 ring-1 border-none ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
             placeholder="0">
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+              <span class="text-zinc-100 sm:text-sm">x</span>
+            </div>
         </div>
       </div>
       <button
@@ -192,7 +192,7 @@ function submit(e) {
           <h4 class="font-semibold text-end">{{ item.name }} </h4>
         </div>
         <div class="w-[300px]">
-          <p class="font-semibold">R$ {{ item.value }}</p>
+          <p class="font-semibold">❤ {{ item.value }}x</p>
         </div>
       </div>
     </div>
