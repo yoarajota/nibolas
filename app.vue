@@ -123,6 +123,8 @@ function calcHowMuch() {
 function submit(e) {
   e.preventDefault()
 
+  if (!reactiveForm.name || reactiveForm.value <= 0) return
+
   supabase
     .from('nibolas')
     .insert(
@@ -177,7 +179,8 @@ function submit(e) {
         </div>
       </div>
       <button
-        class="h-fit inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-6 bg-zinc-100 text-slate-900 hover:bg-slate-300">
+        :disabled="!reactiveForm.name || reactiveForm.value <= 0"
+        class="disabled:bg-slate-300 disabled:cursor-not-allowed transition h-fit inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-6 bg-zinc-100 text-slate-900 hover:bg-slate-300">
         Enviar
       </button>
     </form>
